@@ -15,7 +15,7 @@ LexiconAI is a full-stack AI chat platform similar to ChatGPT, supporting multip
 
 ## Tech Stack
 
-* **Frontend**: Next.js, React, Tailwind CSS
+* **Frontend**: Next.js, Tailwind CSS, JavaScript
 * **Backend**: Next.js App Router APIs, Node.js
 * **Database**: MongoDB with Mongoose
 * **Auth**: NextAuth
