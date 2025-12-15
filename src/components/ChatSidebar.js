@@ -36,7 +36,6 @@ const ChatSidebar = () => {
         </Link>
 
         <button
-          href="#"
           className="rounded-xl border border-zinc-300 px-3 py-2 hover:bg-zinc-200 dark:border-zinc-700 dark:hover:bg-zinc-800 text-sm font-medium text-zinc-800 transition  dark:text-zinc-100 flex cursor-pointer"
           onClick={() => setOpen(true)}
         >

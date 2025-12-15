@@ -40,7 +40,7 @@ export default function ApiKeyForm() {
       } else {
         setStatusMsg({ type: "success", text: "API key validated and saved." });
         setSaved(true);
-        setKey(""); // clear input for safety
+        setKey("");
       }
     } catch (err) {
       setStatusMsg({ type: "error", text: err.message || "Network error" });
