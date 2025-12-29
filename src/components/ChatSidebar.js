@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchPopup from "./SearchPopup";
-import { MessageCircle, Search, Settings, User } from "./icons";
+import { MessageCircle, Search, Settings, User } from "./icons.temp";
 
 const ChatSidebar = (params) => {
   const [open, setOpen] = useState(false);
