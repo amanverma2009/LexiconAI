@@ -1,11 +1,11 @@
-import React from 'react'
+import ChatWindow from "@/app/chat/components/ChatWindow";
 
-const ChatPage = () => {
+const ChatPage = async () => {
   return (
     <div>
-      h
+      <ChatWindow/>
     </div>
-  )
-}
+  );
+};
 
-export default ChatPage
+export default ChatPage;

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="w-full flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
-      <select name="model-selector" id="model-selector" className="bg-black">
+      <select name="model-selector" id="model-selector" className="dark:bg-black bg-white text-black dark:text-white p-2 rounded-lg">
         <option value="gpt">GPT</option>
         <option value="claude">Claude</option>
         <option value="perplexity">Perplexity</option>
