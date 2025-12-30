@@ -1,12 +1,21 @@
 import React from "react";
+import AiMessage from "./AiMessage";
+import UserMessage from "./UserMessage";
 
-const MessageBubble = () => {
+const MessageBubble = ({ role, content }) => {
+  if (!content) return null;
+
   return (
-    <div className="flex flex-col gap-2 m-4">
-      <div className="p-5 border w-max">Sender</div>
-      <div className="p-5 border w-max">Message content</div>
+    <div className="m-4">
+      {role === "assistant" && <AiMessage message={content} />}
+      {role === "user" && <UserMessage message={content} />}
+      {role === "system" && (
+        <div className="text-center text-sm text-gray-500">
+          {content}
+        </div>
+      )}
     </div>
   );
 };
 
-export default MessageBubble;
+export default React.memo(MessageBubble);

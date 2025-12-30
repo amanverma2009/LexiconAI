@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ModelProvider } from "./context/ModelContext";
 
 const poppins = Poppins({
   weight: "400",
@@ -38,7 +39,9 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} antialiased`}>
+        <ModelProvider>{children}</ModelProvider>
+      </body>
     </html>
   );
 }

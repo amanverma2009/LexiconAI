@@ -1,10 +1,10 @@
 import ChatWindow from "@/app/chat/components/ChatWindow";
 
-const ChatPage = async () => {
+const ChatPage = () => {
   return (
-    <div>
-      <ChatWindow/>
-    </div>
+    <>
+      <ChatWindow />
+    </>
   );
 };
 

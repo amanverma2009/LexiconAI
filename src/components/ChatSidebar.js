@@ -32,7 +32,7 @@ const ChatSidebar = (params) => {
           href="/chat"
           className="rounded-xl bg-linear-to-r from-blue-600 to-purple-600 px-3 py-2 transition cursor-pointer text-sm font-medium flex gap-2 items-center hover:from-blue-700 hover:to-purple-700 text-zinc-800 dark:text-zinc-100"
         >
-          <MessageCircle />
+          <MessageCircle/>
           New Chat
         </Link>
 
