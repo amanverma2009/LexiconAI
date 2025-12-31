@@ -1,6 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ModelProvider } from "./context/ModelContext";
+import { ModelProvider } from "../context/ModelContext";
 
 const poppins = Poppins({
   weight: "400",

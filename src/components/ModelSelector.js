@@ -1,5 +1,5 @@
 "use client";
-import { useModel } from "@/app/context/ModelContext";
+import { useModel } from "@/context/ModelContext";
 
 const ModelSelector = () => {
   const { model, setModel } = useModel();

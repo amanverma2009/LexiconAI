@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useModel } from "@/app/context/ModelContext";
+import { useModel } from "@/context/ModelContext";
 
 const MessageInput = ({ onKeyDown, onSend }) => {
   const [value, setValue] = useState("");

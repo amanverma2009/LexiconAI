@@ -12,23 +12,25 @@ export default function ThemeToggle() {
 
   return (
     <div className="space-y-2">
-      <p className="text-sm font-medium">Theme</p>
+      <p className="text-sm font-medium text-gray-300">Theme</p>
 
-      <div className="flex gap-2">
+      <select className="w-full bg-gray-800/80 border border-gray-700/50 rounded-lg px-4 py-3 text-white focus:border-blue-500/50 outline-none transition-all duration-200 pr-8">
         {THEMES.map((theme) => (
-          <button
+          <option
             key={theme}
             onClick={() => select(theme)}
             className={`px-3 py-1 rounded border text-sm capitalize
-              ${active === theme
-                ? "bg-black text-white dark:bg-white dark:text-black"
-                : "bg-transparent"
+              ${
+                active === theme
+                  ? "bg-black text-gray-300 dark:bg-white dark:text-black"
+                  : "bg-transparent"
               }`}
+            value={theme}
           >
             {theme}
-          </button>
+          </option>
         ))}
-      </div>
+      </select>
     </div>
   );
 }
