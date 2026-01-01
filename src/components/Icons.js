@@ -1,1 +1,1 @@
-export { MessageCircle, Search, Settings, User } from "lucide-react";
+export { MessageCircle, Search, Settings, User, ArrowLeftIcon } from "lucide-react";
