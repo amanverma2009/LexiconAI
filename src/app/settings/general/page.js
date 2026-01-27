@@ -20,7 +20,7 @@ const page = () => {
                 Automatically save your chat history
               </p>
             </div>
-            <button className="relative w-12 h-6 rounded-full transition-all duration-200 bg-linear-to-r from-blue-600 to-purple-600">
+            <button className="relative w-12 h-6 rounded-full transition-all duration-200 bg-gradient-to-r from-blue-600 to-purple-600">
               <div className="absolute w-5 h-5 bg-white rounded-full top-0.5 transition-all duration-200 left-6"></div>
             </button>
           </div>
@@ -33,7 +33,7 @@ const page = () => {
                 Receive notifications for important updates
               </p>
             </div>
-            <button className="relative w-12 h-6 rounded-full transition-all duration-200 bg-linear-to-r from-blue-600 to-purple-600">
+            <button className="relative w-12 h-6 rounded-full transition-all duration-200 bg-gradient-to-r from-blue-600 to-purple-600">
               <div className="absolute w-5 h-5 bg-white rounded-full top-0.5 transition-all duration-200 left-6"></div>
             </button>
           </div>

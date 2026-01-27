@@ -16,7 +16,7 @@ const page = () => {
         </h3>
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
-            <div className="w-16 h-16 bg-linear-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
               <User />
             </div>
             <div>
