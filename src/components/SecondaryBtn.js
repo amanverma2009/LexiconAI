@@ -1,7 +1,7 @@
 
 const SecondaryBtn = (params) => {
   return (
-    <button className={`px-6 py-2 bg-gray-800/80 hover:bg-gray-700/80 border border-gray-700/50 rounded-lg text-white transition-all duration-200 whitespace-nowrap cursor-pointer ${params.className}`}>
+    <button className={`px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/15 rounded-2xl text-white/90 text-sm font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer shadow-sm active:translate-y-px ${params.className || ""}`}>
       {params.content}
     </button>
   );

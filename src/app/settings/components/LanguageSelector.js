@@ -2,10 +2,10 @@
 const LanguageSelector = () => {
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-300 mb-2">
+      <label className="block text-sm font-semibold text-white/80 mb-2">
         Language
       </label>
-      <select className="w-full bg-gray-800/80 border border-gray-700/50 rounded-lg px-4 py-3 text-white focus:border-blue-500/50 outline-none transition-all duration-200 pr-8">
+      <select className="w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition hover:bg-white/8">
         <option value="english">English</option>
         <option value="spanish">Spanish</option>
         <option value="french">French</option>

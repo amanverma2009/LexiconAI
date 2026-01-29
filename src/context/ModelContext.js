@@ -5,12 +5,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ModelContext = createContext(null);
 
 export const ModelProvider = ({ children }) => {
-  const [model, setModel] = useState("gpt");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("model");
-    if (saved) setModel(saved);
-  }, []);
+  const [model, setModel] = useState(() => {
+    if (typeof window === "undefined") return "gpt";
+    return localStorage.getItem("model") || "gpt";
+  });
 
   useEffect(() => {
     localStorage.setItem("model", model);

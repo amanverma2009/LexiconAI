@@ -2,19 +2,23 @@
 
 export default function Error({ error, reset }) {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center text-center">
-      <h2 className="text-2xl font-semibold">Something went wrong</h2>
+    <div className="min-h-screen w-full flex items-center justify-center px-4">
+      <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+        <h2 className="text-2xl font-extrabold tracking-tight bg-linear-to-r from-indigo-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+          Something went wrong
+        </h2>
 
-      <p className="mt-3 max-w-md text-sm text-neutral-600 dark:text-neutral-400">
-        An unexpected error occurred. Try again.
-      </p>
+        <p className="mt-3 max-w-md mx-auto text-sm text-white/60">
+          An unexpected error occurred. Try again — and if it keeps happening, refresh the page.
+        </p>
 
-      <button
-        onClick={() => reset()}
-        className="mt-6 rounded-md bg-black px-4 py-2 text-white dark:bg-white dark:text-black"
-      >
-        Retry
-      </button>
+        <button
+          onClick={() => reset()}
+          className="mt-7 inline-flex items-center justify-center rounded-2xl bg-linear-to-r from-blue-600 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:from-blue-700 hover:to-purple-700"
+        >
+          Retry
+        </button>
+      </div>
     </div>
   );
 }

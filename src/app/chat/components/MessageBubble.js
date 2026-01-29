@@ -6,11 +6,11 @@ const MessageBubble = ({ role, content }) => {
   if (!content) return null;
 
   return (
-    <div className="m-4">
+    <div className="px-4 py-2">
       {role === "assistant" && <AiMessage message={content} />}
       {role === "user" && <UserMessage message={content} />}
       {role === "system" && (
-        <div className="text-center text-sm text-gray-500">
+        <div className="text-center text-xs text-white/50">
           {content}
         </div>
       )}

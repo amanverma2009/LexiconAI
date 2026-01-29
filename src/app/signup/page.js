@@ -2,45 +2,49 @@ import React from "react";
 
 const signup = () => {
   const InputClass =
-    "w-full px-4 py-2 border rounded-lg focus:outline-white focus:ring-2 focus:ring-black";
+    "w-full px-4 py-3 rounded-2xl border border-white/15 bg-white/5 text-white/90 placeholder:text-white/40 outline-none focus:bg-white/8 transition";
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white overflow-hidden">
-      {/* Decorative background glow */}
-      <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="absolute -top-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-purple-500 blur-3xl" />
-        <div className="absolute bottom-0 right-10 h-60 w-60 rounded-full bg-blue-500 blur-3xl" />
-      </div>
-      <div className="relative z-10 w-full max-w-md rounded-xl bg-black/40 backdrop-blur shadow-white/20 shadow-md p-8">
-        <h1 className="text-2xl font-bold text-center text-white">LexiconAI</h1>
-        <p className="text-center text-slate-300 mt-1">Create your account</p>
-        <form className="mt-6 space-y-4">
-          <input type="text" placeholder="Full Name" className={InputClass} />
+    <div className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden px-4">
+      <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-8 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+        <div className="text-center">
+          <h1 className="text-2xl font-extrabold tracking-tight bg-linear-to-r from-indigo-300 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
+            LexiconAI
+          </h1>
+          <p className="mt-2 text-sm text-white/70">Create your account in seconds.</p>
+        </div>
 
-          <input type="email" placeholder="Email" className={InputClass} />
+        <form className="mt-7 space-y-3">
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60">Full name</label>
+            <input type="text" placeholder="Jane Doe" className={InputClass} />
+          </div>
 
-          <input
-            type="password"
-            placeholder="Password"
-            className={InputClass}
-          />
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60">Email</label>
+            <input type="email" placeholder="name@company.com" className={InputClass} />
+          </div>
 
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            className={InputClass}
-          />
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60">Password</label>
+            <input type="password" placeholder="••••••••" className={InputClass} />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-xs font-semibold text-white/60">Confirm password</label>
+            <input type="password" placeholder="••••••••" className={InputClass} />
+          </div>
 
           <button
             type="submit"
-            className="w-full py-2 bg-black text-white rounded-lg hover:opacity-90"
+            className="w-full mt-2 py-3 rounded-2xl bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm font-semibold shadow-sm transition"
           >
             Create Account
           </button>
         </form>
 
-        <p className="text-center text-sm text-gray-600 mt-4">
+        <p className="text-center text-sm text-white/55 mt-5">
           Already have an account?
-          <a href="/signin" className="text-white font-medium ml-1">
+          <a href="/signin" className="text-white font-semibold ml-1 hover:underline">
             Sign In
           </a>
         </p>
