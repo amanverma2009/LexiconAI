@@ -6,9 +6,12 @@ import { Menu } from "lucide-react";
 
 const Navbar = ({ onToggleSidebar }) => {
   return (
-    <nav className="w-full sticky top-0 z-30 flex h-16 items-center justify-between px-4 sm:px-6 border-b border-white/10 bg-white/5 backdrop-blur-xl">
+    <nav className="w-full sticky top-0 z-30 flex h-16 items-center justify-between px-4 sm:px-6 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl text-slate-900 dark:border-white/10 dark:bg-white/5 dark:text-white">
       <div className="flex items-center gap-3">
-        <button onClick={onToggleSidebar} className="md:hidden p-2 text-white">
+        <button
+          onClick={onToggleSidebar}
+          className="md:hidden p-2 text-slate-700 dark:text-white"
+        >
           <Menu size={20} />
         </button>
         <ModelSelector />
@@ -16,7 +19,7 @@ const Navbar = ({ onToggleSidebar }) => {
       <div className="flex items-center gap-2">
         <Link
           href="/signin"
-          className="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold text-white/90 border border-white/15 bg-white/5 transition hover:bg-white/10"
+          className="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold text-slate-700 border border-slate-200/80 bg-white/70 transition hover:bg-slate-100/80 dark:text-white/90 dark:border-white/15 dark:bg-white/5 dark:hover:bg-white/10"
         >
           Sign In
         </Link>

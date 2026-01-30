@@ -10,7 +10,7 @@ const MessageBubble = ({ role, content }) => {
       {role === "assistant" && <AiMessage message={content} />}
       {role === "user" && <UserMessage message={content} />}
       {role === "system" && (
-        <div className="text-center text-xs text-white/50">
+        <div className="text-center text-xs text-slate-500 dark:text-white/50">
           {content}
         </div>
       )}

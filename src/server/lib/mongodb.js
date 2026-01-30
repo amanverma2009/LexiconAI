@@ -13,9 +13,7 @@ export async function connectDB() {
   if (cached.conn) return cached.conn;
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, {
-      dbName: "lexiconai",
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+      dbName: "lexiconai"
     }).then((mongooseInstance) => {
       return mongooseInstance;
     });

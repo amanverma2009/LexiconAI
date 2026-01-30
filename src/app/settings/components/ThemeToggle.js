@@ -1,29 +1,48 @@
 "use client";
-import { useState } from "react";
-import { THEMES, getStoredTheme, setTheme } from "@/utils/theme";
+import { useEffect, useSyncExternalStore } from "react";
+import {
+  THEMES,
+  applyTheme,
+  getStoredTheme,
+  subscribeToTheme,
+  setTheme,
+  watchSystemTheme,
+} from "@/utils/theme";
 
 export default function ThemeToggle() {
-  const [active, setActive] = useState(getStoredTheme());
+  const active = useSyncExternalStore(
+    subscribeToTheme,
+    () => getStoredTheme(),
+    () => "system",
+  );
 
-  const select = (theme) => {
-    setActive(theme);
-    setTheme(theme);
-  };
+  useEffect(() => {
+    applyTheme(active);
+  }, [active]);
+
+  useEffect(() => {
+    if (active !== "system") return undefined;
+    return watchSystemTheme(() => applyTheme("system"));
+  }, [active]);
+
+  const select = (theme) => setTheme(theme);
 
   return (
     <div className="space-y-2">
-      <p className="text-sm font-semibold text-white/80">Theme</p>
+      <p className="text-sm font-semibold text-slate-700 dark:text-white/80">
+        Theme
+      </p>
 
-      <div className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-white/5 p-2">
+      <div className="flex flex-wrap gap-2 rounded-2xl border border-slate-200/70 bg-white/80 p-2 dark:border-white/10 dark:bg-white/5">
         {THEMES.map((theme) => (
           <button
             key={theme}
             onClick={() => select(theme)}
-            className={`px-3 py-1.5 rounded-xl text-sm font-semibold capitalize transition motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0
+            className={`px-3 py-1.5 rounded-xl text-sm font-semibold capitalize transition hover:cursor-pointer motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0
               ${
                 active === theme
                   ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-sm"
-                  : "text-white/70 hover:bg-white/10"
+                  : "text-slate-600 hover:bg-slate-100/80 dark:text-white/70 dark:hover:bg-white/10"
               }`}
             value={theme}
           >

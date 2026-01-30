@@ -1,11 +1,24 @@
-import React from 'react'
+import mongoose from "mongoose";
 
-const Chat = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const ChatSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      trim: true,
+      default: "New Chat",
+    },
+    userId: {
+      type: String,
+      default: null,
+    },
+    lastMessageAt: {
+      type: Date,
+      default: null,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-export default Chat
+export default mongoose.models.Chat || mongoose.model("Chat", ChatSchema);

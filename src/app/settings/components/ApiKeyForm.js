@@ -75,23 +75,23 @@ export default function ApiKeyForm() {
   return (
     <form
       onSubmit={handleSave}
-      className="space-y-4 p-4 rounded shadow-sm"
+      className="space-y-4 rounded-2xl border border-slate-200/70 bg-white/80 p-4 shadow-sm dark:border-white/10 dark:bg-white/5"
     >
-      <label className="block text-sm font-medium">
+      <label className="block text-sm font-medium text-slate-700 dark:text-white/80">
         OpenAI API Key
       </label>
       <input
         value={key}
         onChange={(e) => setKey(e.target.value)}
         placeholder="sk-..."
-        className="w-full border border-gray-200 rounded p-2 text-sm"
+        className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus-visible:ring-2 focus-visible:ring-blue-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/15 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40 dark:focus-visible:ring-offset-zinc-950"
         spellCheck={false}
       />
 
       <div className="flex gap-3">
         <button
           type="submit"
-          className="px-4 py-2 rounded bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60 hover:cursor-pointer"
+          className="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60 hover:cursor-pointer"
           disabled={loading}
         >
           {loading ? "Validating..." : "Validate and Save"}
@@ -100,7 +100,7 @@ export default function ApiKeyForm() {
         <button
           type="button"
           onClick={handleDelete}
-          className="px-4 py-2 rounded border border-gray-200 hover:bg-gray-900 hover:cursor-pointer"
+          className="px-4 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900 hover:cursor-pointer dark:border-white/15 dark:text-white/80 dark:hover:bg-white/10 dark:hover:text-white"
           disabled={loading}
         >
           Delete Key
@@ -111,15 +111,15 @@ export default function ApiKeyForm() {
         <div
           className={`mt-2 text-sm p-2 rounded ${
             statusMsg.type === "error"
-              ? "bg-red-50 text-red-700"
-              : "bg-green-50 text-green-700"
+              ? "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-200"
+              : "bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-200"
           }`}
         >
           {statusMsg.text}
         </div>
       )}
 
-      <div className="text-xs text-gray-500 mt-2">
+      <div className="text-xs text-slate-500 mt-2 dark:text-white/50">
         We store your key encrypted. You are billed by OpenAI for calls made
         with your key. Do not share sensitive keys publicly.
       </div>

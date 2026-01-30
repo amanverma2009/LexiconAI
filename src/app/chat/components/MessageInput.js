@@ -23,7 +23,7 @@ const MessageInput = ({ onKeyDown, onSend }) => {
 
   return (
     <div className="fixed bottom-4 left-0 right-0 z-40 flex justify-center px-3">
-      <div className="flex w-full max-w-2xl items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-3 py-2 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+      <div className="flex w-full max-w-2xl items-center gap-2 rounded-3xl border border-slate-200/70 bg-white/80 px-3 py-2 shadow-[0_18px_60px_rgba(0,0,0,0.15)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
         <input
           type="text"
           name="message"
@@ -37,7 +37,7 @@ const MessageInput = ({ onKeyDown, onSend }) => {
             }
           }}
           placeholder={`Ask ${model} anything...`}
-          className="w-full bg-transparent px-3 py-2 text-sm text-white/90 placeholder:text-white/40 outline-none"
+          className="w-full bg-transparent px-3 py-2 text-sm text-slate-800 placeholder:text-slate-400 outline-none dark:text-white/90 dark:placeholder:text-white/40"
         />
 
         <button
